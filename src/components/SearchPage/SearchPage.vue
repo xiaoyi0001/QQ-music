@@ -146,7 +146,7 @@
                 this.isShowHistory = false;
                 this.isShowClear = false;
                 let self = this;
-                vm.$http.jsonp('http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg', {
+                vm.$http.jsonp('https://bird.ioliu.cn/v1/?url=http://soso.music.qq.com/fcgi-bin/fcg_search_xmldata.fcg', {
                     params: {
                         source: 0,
                         type: 'qry_song',
@@ -186,7 +186,7 @@
             playMusic(name) {
                 var self = this;
                 console.log(name);
-                vm.$http.jsonp('http://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg', {
+                vm.$http.jsonp('https://bird.ioliu.cn/v1/?url=http://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg', {
                     params: {
                         key: name,
                         g_tk: 5381,
@@ -201,7 +201,7 @@
                     }, jsonp: 'jsonpCallback'
                 }).then((response) => {
                     if (response.data.code === 0) {
-                        self.musicUrl = 'http://ws.stream.qqmusic.qq.com/'+response.data.data.song.itemlist[0].id+'.m4a?fromtag=46';
+                        self.musicUrl = 'https://bird.ioliu.cn/v1/?url=http://ws.stream.qqmusic.qq.com/'+response.data.data.song.itemlist[0].id+'.m4a?fromtag=46';
                     }
                 })
             }
