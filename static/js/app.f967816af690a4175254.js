@@ -1430,16 +1430,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return _c('li', [_c('a', {
       attrs: {
         "href": "javascript:;"
-      },
+      }
+    }, [_c('span', {
+      staticClass: "hist"
+    }), _vm._v(" "), _c('span', {
+      staticClass: "text",
       on: {
         "click": function($event) {
           _vm.addSearch(item)
         }
       }
-    }, [_c('span', {
-      staticClass: "hist"
-    }), _vm._v(" "), _c('span', {
-      staticClass: "text"
     }, [_vm._v(_vm._s(item))]), _vm._v(" "), _c('span', {
       staticClass: "fork",
       on: {
